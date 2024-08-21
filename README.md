@@ -1,133 +1,65 @@
-````md
+
 # Mini API com Express e Prisma
 
-## Descrição
+Uma mini API construída com Node.js, Express e Prisma ORM, oferecendo operações CRUD para gerenciar usuários no banco de dados.
 
-Esta mini API foi desenvolvida utilizando Express.js e Prisma ORM para realizar operações CRUD (Create, Read, Update, Delete) com uma tabela de usuários no banco de dados.
+## 🚀 Começando
 
-## Funcionalidades
+Essas instruções ajudarão você a obter uma cópia da API em execução localmente para fins de desenvolvimento e testes.
 
-- **Criar Usuário:** Registra um novo usuário no banco de dados.
-- **Buscar Usuários:** Retorna todos os usuários ou filtra usuários por nome, e-mail ou idade.
-- **Atualizar Usuário:** Atualiza os dados de um usuário específico pelo ID.
-- **Deletar Usuário:** Remove um usuário específico pelo ID.
+### 📋 Pré-requisitos
 
-## Tecnologias Utilizadas
+Você precisará das seguintes ferramentas instaladas:
 
-- [Express.js](https://expressjs.com/)
-- [Prisma ORM](https://www.prisma.io/)
+- Node.js v14 ou superior
+- Prisma Client configurado com seu banco de dados (MySQL, PostgreSQL, SQLite, etc.)
 
-## Requisitos
+### 🔧 Instalação
 
-- **Node.js** v14 ou superior
-- **Prisma Client** configurado com seu banco de dados (MySQL, PostgreSQL, SQLite, etc.)
+Siga os passos abaixo para rodar a API localmente:
 
-## Instalação
-
-1. Clone este repositório:
+1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/gesley/api-node.git
    ```
 
 2. Instale as dependências:
 
-   ```bash
+   ```
    npm install
    ```
 
 3. Configure o Prisma:
-   
-   - Execute o comando para inicializar o Prisma:
-   
+
+   - Inicialize o Prisma:
      ```bash
      npx prisma init
      ```
 
-   - Configure o arquivo `.env` com suas credenciais de banco de dados.
+   - Configure o arquivo `.env` com as credenciais do banco de dados.
 
-4. Execute as migrações para criar a tabela no banco de dados:
+4. Execute as migrações para criar as tabelas no banco de dados:
 
    ```bash
    npx prisma migrate dev --name init
    ```
 
-5. Execute a aplicação:
+5. Inicie a aplicação:
 
    ```bash
    npm start
    ```
 
-## Endpoints
 
-### `POST /usuarios`
+## 📦 Implantação
 
-Cria um novo usuário.
+Para implantar a API em produção, você precisará configurar variáveis de ambiente no servidor e rodar as migrações do Prisma, conforme mostrado na seção de instalação.
 
-- **Corpo da Requisição:**
-  ```json
-  {
-    "name": "Nome do Usuário",
-    "email": "email@exemplo.com",
-    "age": 30
-  }
-  ```
+## 🛠️ Construído com
 
-- **Resposta:**
-  - Status: `200 OK`
-  - Mensagem: `criado`
+Ferramentas utilizadas no desenvolvimento:
 
----
-
-### `GET /usuarios`
-
-Retorna uma lista de usuários. Pode filtrar por nome, email e idade.
-
-- **Parâmetros de Query (Opcional):**
-  - `name`: Filtro pelo nome do usuário.
-  - `email`: Filtro pelo email do usuário.
-  - `age`: Filtro pela idade do usuário.
-
-- **Resposta:**
-  - Status: `200 OK`
-  - Corpo: Lista de usuários.
-
----
-
-### `PUT /usuarios/:id`
-
-Atualiza as informações de um usuário existente.
-
-- **Parâmetros:**
-  - `id`: ID do usuário a ser atualizado.
-
-- **Corpo da Requisição:**
-  ```json
-  {
-    "name": "Novo Nome",
-    "email": "novoemail@exemplo.com",
-    "age": 25
-  }
-  ```
-
-- **Resposta:**
-  - Status: `200 OK`
-  - Mensagem: `atualizado`
-
----
-
-### `DELETE /usuarios/:id`
-
-Remove um usuário pelo ID.
-
-- **Parâmetros:**
-  - `id`: ID do usuário a ser removido.
-
-- **Resposta:**
-  - Status: `200 OK`
-  - Corpo: `{ "message": "deletado" }`
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-````
+* [Express.js](https://expressjs.com/) - O framework web usado
+* [Prisma ORM](https://www.prisma.io/) - ORM para banco de dados
+* [Node.js](https://nodejs.org/) - Ambiente de execução JavaScript
