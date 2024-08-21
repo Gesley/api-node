@@ -1,5 +1,3 @@
-Claro! Aqui está o conteúdo do `README.md` dentro de uma caixa de código para facilitar a cópia:
-
 ````md
 # Mini API com Express e Prisma
 
@@ -133,5 +131,3 @@ Remove um usuário pelo ID.
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 ````
-
-Agora é só copiar e colar!
